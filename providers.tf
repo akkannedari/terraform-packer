@@ -1,14 +1,24 @@
 terraform {
   required_providers {
     aws = {
-      source = "hashicorp/aws"
-
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
     }
   }
-  backend "s3" {
-  bucket = "devops09022023state"
-  key    = "devenv/devops09022023.tfstate"
-  region = "us-east-1"
-}
 }
 
+provider "aws" {
+
+  region = "us-east-1"
+}
+
+terraform {
+  backend "s3" {
+    bucket         = "backendterraformstate"
+    key            = "Development/terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+    dynamodb_table = "backendterraformstate"
+
+  }
+}

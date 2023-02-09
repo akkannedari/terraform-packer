@@ -1,0 +1,8 @@
+resource "aws_s3_bucket" "backend" {
+  bucket = "backendterraformstate"
+
+  tags = {
+    Name        = "backendterraformstate"
+    Environment = var.env
+  }
+}
