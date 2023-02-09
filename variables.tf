@@ -5,6 +5,13 @@ variable "vpc_cidr" {
 
 }
 
+variable "vpc2_cidr" {
+  type        = string
+  description = "VPC CIDR values"
+
+}
+
+
 variable "env" {
   type        = string
   description = "VPC CIDR values"

@@ -6,6 +6,15 @@ resource "aws_vpc" "main" {
   }
 }
 
+resource "aws_vpc" "main2" {
+  cidr_block = var.vpc2_cidr
+
+  tags = {
+    Name = var.env
+  }
+}
+
+
 resource "aws_subnet" "public_subnet1" {
   vpc_id     = aws_vpc.main.id
   cidr_block = var.public_subnet1_cidr
