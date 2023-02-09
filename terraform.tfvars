@@ -1,7 +1,7 @@
 
-vpc_cidr = "10.0.0.0/16"
+vpc_cidr  = "10.0.0.0/16"
 vpc2_cidr = "172.17.0.0/16"
-env      = "Development"
+env       = "Development"
 
 private_subnet1_cidr = "10.0.1.0/26"
 private_subnet2_cidr = "10.0.20.0/26"
