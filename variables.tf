@@ -27,6 +27,15 @@ variable "public_subnet2_cidr" {
 variable "private_subnet1_cidr" {
   type = string
 }
-
 variable "private_subnet2_cidr" {
+  type = string
+}
+
+variable "ami" {
+}
+variable "availability_zone" {
+}
+variable "instance_type" {
+}
+variable "key_name" {
 }

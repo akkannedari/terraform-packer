@@ -1,8 +1,11 @@
 
-vpc_cidr  = "10.0.0.0/16"
-vpc2_cidr = "172.17.0.0/16"
-env       = "Development"
-
+vpc_cidr             = "10.0.0.0/16"
+vpc2_cidr            = "172.17.0.0/16"
+env                  = "Development"
+availability_zone    = "us-east-1a"
+ami                  = "ami-00874d747dde814fa"
+instance_type        = "t2.micro"
+key_name             = "cliUser"
 private_subnet1_cidr = "10.0.1.0/26"
 private_subnet2_cidr = "10.0.20.0/26"
 public_subnet1_cidr  = "10.0.3.0/26"
