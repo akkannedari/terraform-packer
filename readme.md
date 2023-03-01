@@ -223,4 +223,16 @@ Not designed for highly-dynamic infrastructure: Terraform is designed for static
 Despite these limitations, Terraform remains a popular tool for managing infrastructure as code and many organizations are using it to automate their infrastructure deployment and management processes.
  
 
- 
+######################################################################
+#depends_on = [
+#    aws_security_group.Allow_all
+#  ]
+#  lifecycle {
+#    create_before_destroy = true
+#
+#    ignore_changes = [
+#      tags
+#    ]
+#  }
+########################################################################
+

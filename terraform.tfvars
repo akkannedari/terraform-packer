@@ -1,7 +1,10 @@
 
-vpc_cidr             = "10.0.0.0/16"
-vpc2_cidr            = "172.17.0.0/16"
-env                  = "Development"
+vpc_cidr  = "10.0.0.0/16"
+vpc_name  = "public-vpc"
+vpc2_name = "pravite-vpc"
+vpc2_cidr = "172.17.0.0/16"
+env       = "Development"
+#env                  = "PROD"
 availability_zone    = "us-east-1a"
 ami                  = "ami-00874d747dde814fa"
 instance_type        = "t2.micro"

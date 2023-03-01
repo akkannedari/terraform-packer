@@ -17,7 +17,11 @@ variable "env" {
   description = "VPC CIDR values"
 
 }
+variable "vpc_name" {
+}
 
+variable "vpc2_name" {
+}
 variable "public_subnet1_cidr" {
   type = string
 }

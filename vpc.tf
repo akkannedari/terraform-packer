@@ -3,7 +3,7 @@ resource "aws_vpc" "main" {
   enable_dns_hostnames = true
 
   tags = {
-    Name = var.env
+    Name = var.vpc_name
   }
 }
 
@@ -11,7 +11,7 @@ resource "aws_vpc" "main2" {
   cidr_block = var.vpc2_cidr
 
   tags = {
-    Name = var.env
+    Name = var.vpc2_name
   }
 }
 

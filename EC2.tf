@@ -10,20 +10,16 @@ resource "aws_instance" "Linux" {
 
 
   tags = {
-    Name = "Linux"
+    Name = "${var.vpc_name}-Public-Server-${count.index + 1}"
     Env  = var.env
   }
-  depends_on = [
-    aws_security_group.Allow_all
-  ]
 
-  lifecycle {
-    create_before_destroy = true
-
-    ignore_changes = [
-      tags
-    ]
-  }
-
+  user_data = <<-EOF
+  #!/bin/bash
+  sudo apt-get update
+  sudo apt-grt install -y nginx jq net-tools
+  echo "<h1>${var.vpc_name}-Public-Server-${count.index + 1}</h1>" | sudo tee /var/html/index.html
+  EOF
 
 }
+  
