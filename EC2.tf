@@ -1,4 +1,5 @@
 resource "aws_instance" "Linux" {
+  count                       = var.env == "PROD" ? 3 : 1
   ami                         = var.ami
   availability_zone           = var.availability_zone
   instance_type               = var.instance_type
@@ -9,7 +10,7 @@ resource "aws_instance" "Linux" {
 
 
   tags = {
-    Name = " Linux"
+    Name = "Linux"
     Env  = var.env
   }
   depends_on = [
@@ -18,7 +19,7 @@ resource "aws_instance" "Linux" {
 
   lifecycle {
     create_before_destroy = true
-    
+
     ignore_changes = [
       tags
     ]
